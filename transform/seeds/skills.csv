@@ -1,0 +1,52 @@
+skill,category,pattern,case_sensitive
+Python,language,\bpython\b,false
+JavaScript,language,\bjavascript\b|\bjs\b,false
+TypeScript,language,\btypescript\b,false
+React,frontend,\breact(\.js)?\b,false
+Next.js,frontend,\bnext\.?js\b,false
+Node.js,backend,\bnode(\.?js)?\b,false
+Vue / Angular,frontend,\bvue(\.js)?\b|\bangular\b,false
+React Native / Flutter,mobile,react\s*native|\bflutter\b,false
+FastAPI,backend,\bfastapi\b,false
+Django / Flask,backend,\bdjango\b|\bflask\b,false
+Java,language,\bjava\b,false
+C#,language,c#|\.net\b,false
+Go,language,\bgolang\b|\bGo\b,true
+Rust,language,\brust\b,false
+PHP / Laravel,language,\bphp\b|\blaravel\b,false
+SQL,data,\bsql\b,false
+PostgreSQL,data,\bpostgres(ql)?\b,false
+MongoDB / NoSQL,data,\bmongo(db)?\b|\bnosql\b|\bdynamodb\b,false
+Supabase,data,\bsupabase\b,false
+Redis,data,\bredis\b,false
+REST APIs,backend,\brest(ful)?\s*api|\bapis?\b,false
+GraphQL,backend,\bgraphql\b,false
+AWS,cloud,\baws\b|amazon web services|\blambda\b,false
+GCP,cloud,\bgcp\b|google cloud,false
+Azure,cloud,\bazure\b,false
+Docker,devops,\bdocker\b|\bcontainer,false
+Kubernetes,devops,\bkubernetes\b|\bk8s\b,false
+Terraform / IaC,devops,\bterraform\b|infrastructure as code|\biac\b,false
+CI/CD,devops,ci\s*/\s*cd|github actions|\bjenkins\b|gitlab ci,false
+Linux,devops,\blinux\b,false
+Git,devops,\bgit\b|\bgithub\b,false
+Testing,devops,\bpytest\b|\bjest\b|unit test|\btdd\b|\bcypress\b,false
+LLMs / GenAI,ai,\bllms?\b|large language|\bgpt\b|openai|anthropic|claude|generative ai|\bgenai\b,false
+RAG / vector DB,ai,\brag\b|retrieval.augmented|vector (db|database|store)|pinecone|pgvector|embeddings,false
+AI agents,ai,\bai agents?\b|agentic|\blangchain\b|\blanggraph\b|\bcrewai\b|\bmcp\b,false
+Machine Learning,ai,machine learning|\bml\b|pytorch|tensorflow|scikit,false
+Data (pandas/ETL),data,\bpandas\b|\betl\b|\belt\b|data pipeline,false
+Airflow / dbt / Spark,data,\bairflow\b|\bdbt\b|\bspark\b|\bdatabricks\b|\bsnowflake\b,false
+Web scraping,automation,scrap(ing|er|e)\b|crawl(er|ing)|data extraction,false
+Playwright,automation,\bplaywright\b|\bselenium\b|\bpuppeteer\b,false
+Automation,automation,\bautomat(ion|e|ing)\b|\brpa\b,false
+n8n / Zapier / Make,automation,\bn8n\b|\bzapier\b|make\.com|\bintegromat\b,false
+Chatbots / WhatsApp,ai,chat\s*bot|whatsapp|conversational ai|\btwilio\b,false
+Stripe / payments,backend,\bstripe\b|payment (gateway|processing),false
+Shopify / e-commerce,business,\bshopify\b|e-?commerce|woocommerce,false
+Salesforce / HubSpot / CRM,business,\bsalesforce\b|\bhubspot\b|\bcrm\b,false
+Power BI / Tableau,data,power\s*bi|\btableau\b|\blooker\b,false
+Cybersecurity,security,cyber\s*security|\bsoc\b|penetration test|\bsiem\b,false
+Networking (Cisco),security,\bcisco\b|\bccna\b|networking|\brouting\b,false
+Arduino / IoT,hardware,\barduino\b|\biot\b|embedded|firmware|microcontroller,false
+Figma / UI,frontend,\bfigma\b|ui/ux|\bux\b,false

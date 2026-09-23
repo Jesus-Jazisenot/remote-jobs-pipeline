@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Remote Tech Jobs — Skill Demand</title>
+<style>
+ :root { --bg:#f7f8fa; --card:#fff; --text:#1b1f24; --muted:#667085; --line:#e4e7ec; --bar:#3b6fe0; }
+ @media (prefers-color-scheme: dark) {
+  :root { --bg:#101216; --card:#191c21; --text:#e6e8eb; --muted:#98a2b3; --line:#2a2f37; --bar:#7aa2ff; } }
+ body { margin:0; background:var(--bg); color:var(--text); font:15px/1.5 system-ui,sans-serif; }
+ main { max-width:960px; margin:0 auto; padding:32px 16px 64px; }
+ h1 { margin:0 0 4px; font-size:26px; } h2 { font-size:18px; margin:32px 0 10px; }
+ .muted { color:var(--muted); } .num { text-align:right; font-variant-numeric:tabular-nums; }
+ .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; margin:20px 0; }
+ .kpi { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+ .kpi b { display:block; font-size:24px; }
+ .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:6px 14px; overflow-x:auto; }
+ table { border-collapse:collapse; width:100%; }
+ th,td { padding:7px 8px; border-bottom:1px solid var(--line); white-space:nowrap; }
+ th { text-align:left; font-size:12px; color:var(--muted); font-weight:600; }
+ tr:last-child td { border-bottom:0; } rect { fill:var(--bar); }
+ ul { columns:2; padding-left:18px; } footer { margin-top:36px; font-size:13px; }
+</style></head><body><main>
+<h1>What remote tech jobs ask for</h1>
+<p class="muted">Daily ELT pipeline: 3 public job APIs → DuckDB → dbt → this page. Updated 2026-09-23 16:45 UTC.</p>
+
+<div class="kpis">
+ <div class="kpi"><b>551</b><span class="muted">tech postings analyzed</span></div>
+ <div class="kpi"><b>118</b><span class="muted">with a published salary</span></div>
+ <div class="kpi"><b>$152k</b><span class="muted">median salary (USD/yr)</span></div>
+ <div class="kpi"><b>49</b><span class="muted">open to candidates in Mexico</span></div>
+</div>
+
+<h2>Most requested skills</h2>
+<div class="card"><table>
+<tr><th>Skill</th><th>Category</th><th class=num>Postings</th><th>Share</th><th class=num>Median pay</th><th class=num>Open to MX</th></tr>
+<tr><td>REST APIs</td><td class=muted>backend</td><td class=num>276</td><td><svg width="160" height="10" aria-hidden="true"><rect width="160" height="10" rx="2"/></svg> <span class=muted>50%</span></td><td class=num>$137k</td><td class=num>26</td></tr>
+<tr><td>Python</td><td class=muted>language</td><td class=num>271</td><td><svg width="160" height="10" aria-hidden="true"><rect width="157" height="10" rx="2"/></svg> <span class=muted>49%</span></td><td class=num>$146k</td><td class=num>19</td></tr>
+<tr><td>LLMs / GenAI</td><td class=muted>ai</td><td class=num>213</td><td><svg width="160" height="10" aria-hidden="true"><rect width="123" height="10" rx="2"/></svg> <span class=muted>39%</span></td><td class=num>$175k</td><td class=num>18</td></tr>
+<tr><td>Automation</td><td class=muted>automation</td><td class=num>198</td><td><svg width="160" height="10" aria-hidden="true"><rect width="115" height="10" rx="2"/></svg> <span class=muted>36%</span></td><td class=num>$141k</td><td class=num>16</td></tr>
+<tr><td>JavaScript</td><td class=muted>language</td><td class=num>190</td><td><svg width="160" height="10" aria-hidden="true"><rect width="110" height="10" rx="2"/></svg> <span class=muted>34%</span></td><td class=num>$132k</td><td class=num>22</td></tr>
+<tr><td>Machine Learning</td><td class=muted>ai</td><td class=num>172</td><td><svg width="160" height="10" aria-hidden="true"><rect width="100" height="10" rx="2"/></svg> <span class=muted>31%</span></td><td class=num>$175k</td><td class=num>14</td></tr>
+<tr><td>AWS</td><td class=muted>cloud</td><td class=num>143</td><td><svg width="160" height="10" aria-hidden="true"><rect width="83" height="10" rx="2"/></svg> <span class=muted>26%</span></td><td class=num>$151k</td><td class=num>10</td></tr>
+<tr><td>React</td><td class=muted>frontend</td><td class=num>124</td><td><svg width="160" height="10" aria-hidden="true"><rect width="72" height="10" rx="2"/></svg> <span class=muted>22%</span></td><td class=num>$140k</td><td class=num>15</td></tr>
+<tr><td>SQL</td><td class=muted>data</td><td class=num>121</td><td><svg width="160" height="10" aria-hidden="true"><rect width="70" height="10" rx="2"/></svg> <span class=muted>22%</span></td><td class=num>$152k</td><td class=num>8</td></tr>
+<tr><td>Git</td><td class=muted>devops</td><td class=num>117</td><td><svg width="160" height="10" aria-hidden="true"><rect width="68" height="10" rx="2"/></svg> <span class=muted>21%</span></td><td class=num>$110k</td><td class=num>10</td></tr>
+<tr><td>AI agents</td><td class=muted>ai</td><td class=num>116</td><td><svg width="160" height="10" aria-hidden="true"><rect width="67" height="10" rx="2"/></svg> <span class=muted>21%</span></td><td class=num>$184k</td><td class=num>14</td></tr>
+<tr><td>CI/CD</td><td class=muted>devops</td><td class=num>113</td><td><svg width="160" height="10" aria-hidden="true"><rect width="66" height="10" rx="2"/></svg> <span class=muted>21%</span></td><td class=num>$141k</td><td class=num>6</td></tr>
+<tr><td>TypeScript</td><td class=muted>language</td><td class=num>107</td><td><svg width="160" height="10" aria-hidden="true"><rect width="62" height="10" rx="2"/></svg> <span class=muted>19%</span></td><td class=num>$141k</td><td class=num>19</td></tr>
+<tr><td>Azure</td><td class=muted>cloud</td><td class=num>97</td><td><svg width="160" height="10" aria-hidden="true"><rect width="56" height="10" rx="2"/></svg> <span class=muted>18%</span></td><td class=num>$157k</td><td class=num>6</td></tr>
+<tr><td>Node.js</td><td class=muted>backend</td><td class=num>91</td><td><svg width="160" height="10" aria-hidden="true"><rect width="53" height="10" rx="2"/></svg> <span class=muted>17%</span></td><td class=num>$140k</td><td class=num>19</td></tr>
+<tr><td>Java</td><td class=muted>language</td><td class=num>87</td><td><svg width="160" height="10" aria-hidden="true"><rect width="50" height="10" rx="2"/></svg> <span class=muted>16%</span></td><td class=num>$134k</td><td class=num>11</td></tr>
+<tr><td>Docker</td><td class=muted>devops</td><td class=num>86</td><td><svg width="160" height="10" aria-hidden="true"><rect width="50" height="10" rx="2"/></svg> <span class=muted>16%</span></td><td class=num>$111k</td><td class=num>7</td></tr>
+<tr><td>Data (pandas/ETL)</td><td class=muted>data</td><td class=num>84</td><td><svg width="160" height="10" aria-hidden="true"><rect width="49" height="10" rx="2"/></svg> <span class=muted>15%</span></td><td class=num>$173k</td><td class=num>7</td></tr>
+<tr><td>GCP</td><td class=muted>cloud</td><td class=num>82</td><td><svg width="160" height="10" aria-hidden="true"><rect width="48" height="10" rx="2"/></svg> <span class=muted>15%</span></td><td class=num>$176k</td><td class=num>11</td></tr>
+<tr><td>Airflow / dbt / Spark</td><td class=muted>data</td><td class=num>69</td><td><svg width="160" height="10" aria-hidden="true"><rect width="40" height="10" rx="2"/></svg> <span class=muted>13%</span></td><td class=num>$185k</td><td class=num>3</td></tr>
+<tr><td>Next.js</td><td class=muted>frontend</td><td class=num>68</td><td><svg width="160" height="10" aria-hidden="true"><rect width="39" height="10" rx="2"/></svg> <span class=muted>12%</span></td><td class=num>$57k</td><td class=num>12</td></tr>
+<tr><td>Kubernetes</td><td class=muted>devops</td><td class=num>67</td><td><svg width="160" height="10" aria-hidden="true"><rect width="39" height="10" rx="2"/></svg> <span class=muted>12%</span></td><td class=num>$171k</td><td class=num>5</td></tr>
+<tr><td>Chatbots / WhatsApp</td><td class=muted>ai</td><td class=num>60</td><td><svg width="160" height="10" aria-hidden="true"><rect width="35" height="10" rx="2"/></svg> <span class=muted>11%</span></td><td class=num>$210k</td><td class=num>2</td></tr>
+<tr><td>Vue / Angular</td><td class=muted>frontend</td><td class=num>57</td><td><svg width="160" height="10" aria-hidden="true"><rect width="33" height="10" rx="2"/></svg> <span class=muted>10%</span></td><td class=num>$126k</td><td class=num>11</td></tr>
+<tr><td>PostgreSQL</td><td class=muted>data</td><td class=num>56</td><td><svg width="160" height="10" aria-hidden="true"><rect width="32" height="10" rx="2"/></svg> <span class=muted>10%</span></td><td class=num>$140k</td><td class=num>8</td></tr>
+</table></div>
+
+<h2>Salary by level (USD / year)</h2>
+<div class="card"><table>
+<tr><th>Level</th><th class=num>Postings</th><th class=num>With salary</th><th class=num>P25</th><th class=num>Median</th><th class=num>P75</th><th class=num>Median open to MX</th></tr>
+<tr><td>junior</td><td class=num>93</td><td class=num>7</td><td class=num>$80k</td><td class=num><b>$86k</b></td><td class=num>$92k</td><td class=num>$17k</td></tr>
+<tr><td>mid</td><td class=num>172</td><td class=num>30</td><td class=num>$65k</td><td class=num><b>$125k</b></td><td class=num>$173k</td><td class=num>$77k</td></tr>
+<tr><td>senior</td><td class=num>286</td><td class=num>81</td><td class=num>$125k</td><td class=num><b>$168k</b></td><td class=num>$196k</td><td class=num>$130k</td></tr>
+</table></div>
+
+<h2>Skills asked for together</h2>
+<ul><li>Python + REST APIs <span class=muted>(139)</span></li>
+<li>JavaScript + REST APIs <span class=muted>(124)</span></li>
+<li>Machine Learning + Python <span class=muted>(119)</span></li>
+<li>Automation + Python <span class=muted>(118)</span></li>
+<li>LLMs / GenAI + Machine Learning <span class=muted>(116)</span></li>
+<li>LLMs / GenAI + Python <span class=muted>(109)</span></li>
+<li>Automation + REST APIs <span class=muted>(108)</span></li>
+<li>JavaScript + React <span class=muted>(107)</span></li>
+<li>LLMs / GenAI + REST APIs <span class=muted>(98)</span></li>
+<li>JavaScript + Python <span class=muted>(94)</span></li>
+<li>AWS + Python <span class=muted>(94)</span></li>
+<li>JavaScript + TypeScript <span class=muted>(90)</span></li></ul>
+
+<footer class="muted">Sources — himalayas: 564 · remoteok: 98 · remotive: 18 (data from <a href="https://himalayas.app">Himalayas</a>, <a href="https://remotive.com">Remotive</a> and <a href="https://remoteok.com">Remote OK</a>). Salaries are converted to annual USD with fixed
+rates; medians with few postings are noisy. Code:
+<a href="https://github.com/Jesus-Jazisenot/remote-jobs-pipeline">github.com/Jesus-Jazisenot/remote-jobs-pipeline</a></footer>
+</main></body></html>

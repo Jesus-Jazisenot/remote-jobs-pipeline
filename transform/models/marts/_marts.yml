@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: fct_tech_jobs
+    description: Tech postings naming at least two known skills.
+    columns:
+      - name: job_id
+        data_tests: [unique, not_null]
+      - name: n_skills
+        data_tests: [not_null]
+
+  - name: mart_skill_demand
+    description: How many postings ask for each skill and what they pay.
+    columns:
+      - name: skill
+        data_tests: [unique, not_null]
+      - name: share_of_jobs
+        data_tests: [not_null]
+
+  - name: mart_salary_by_level
+    columns:
+      - name: level
+        data_tests: [unique]
+
+  - name: mart_skill_pairs
+    description: Skills that appear together in at least 5 postings.

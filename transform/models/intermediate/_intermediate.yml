@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: int_jobs
+    description: Distinct postings from all sources; salary normalized to annual USD.
+    columns:
+      - name: job_id
+        data_tests: [unique, not_null]
+      - name: source
+        data_tests:
+          - accepted_values:
+              arguments: {values: [himalayas, remotive, remoteok]}
+      - name: level
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments: {values: [junior, mid, senior]}
+
+  - name: int_job_skills
+    description: One row per (posting, skill) detected in its text.
+    data_tests:
+      - dbt_utils_unique_combination:
+          arguments: {columns: [job_id, skill]}
+    columns:
+      - name: job_id
+        data_tests:
+          - relationships:
+              arguments: {to: ref('int_jobs'), field: job_id}
+      - name: skill
+        data_tests:
+          - relationships:
+              arguments: {to: ref('skills'), field: skill}
