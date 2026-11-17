@@ -24,7 +24,7 @@ def warehouse(tmp_path_factory):
 
 def test_every_source_lands_in_raw(warehouse):
     warehouse, _ = warehouse
-    counts = dict(warehouse.sql("select 'himalayas', count(*) from raw.himalayas union all "
+    counts = dict(warehouse.execute("select 'himalayas', count(*) from raw.himalayas union all "
                                 "select 'remotive', count(*) from raw.remotive union all "
                                 "select 'remoteok', count(*) from raw.remoteok").fetchall())
     assert counts == {"himalayas": 60, "remotive": 20, "remoteok": 25}
@@ -32,21 +32,21 @@ def test_every_source_lands_in_raw(warehouse):
 
 def test_salaries_are_annual_usd(warehouse):
     warehouse, _ = warehouse
-    lo, hi = warehouse.sql("select min(salary_min_usd), max(salary_max_usd) "
+    lo, hi = warehouse.execute("select min(salary_min_usd), max(salary_max_usd) "
                            "from intermediate.int_jobs").fetchone()
     assert lo >= 5_000 and hi <= 1_000_000
 
 
 def test_remotive_free_text_salary_is_parsed(warehouse):
     warehouse, _ = warehouse
-    n = warehouse.sql("select count(*) from intermediate.int_jobs "
+    n = warehouse.execute("select count(*) from intermediate.int_jobs "
                       "where source = 'remotive' and salary_min_usd is not null").fetchone()[0]
     assert n > 0
 
 
 def test_python_is_detected_as_a_skill(warehouse):
     warehouse, _ = warehouse
-    row = warehouse.sql("select n_jobs from marts.mart_skill_demand "
+    row = warehouse.execute("select n_jobs from marts.mart_skill_demand "
                         "where skill = 'Python'").fetchone()
     assert row and row[0] > 0
 
@@ -54,7 +54,7 @@ def test_python_is_detected_as_a_skill(warehouse):
 def test_go_is_case_sensitive(warehouse):
     warehouse, _ = warehouse
     # "go" as a verb appears in almost every posting; the language must not.
-    share = warehouse.sql("select coalesce(max(share_of_jobs), 0) from marts.mart_skill_demand "
+    share = warehouse.execute("select coalesce(max(share_of_jobs), 0) from marts.mart_skill_demand "
                           "where skill = 'Go'").fetchone()[0]
     assert share < 0.3
 

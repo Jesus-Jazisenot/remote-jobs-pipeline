@@ -26,15 +26,15 @@ def run(db_path: Path | None = None) -> Path:
     out = Path(os.environ.get("REPORT_PATH", OUT))
     db_path = db_path or Path(os.environ.get("DUCKDB_PATH", ROOT / "data" / "warehouse.duckdb"))
     with duckdb.connect(str(db_path), read_only=True) as c:
-        totals = c.sql(
+        totals = c.execute(
             """select count(*), count(salary_mid_usd), count(*) filter (where open_to_mexico),
                       round(median(salary_mid_usd))
                from marts.fct_tech_jobs"""
         ).fetchone()
-        skills = c.sql("select * from marts.mart_skill_demand limit 25").fetchall()
-        levels = c.sql("select * from marts.mart_salary_by_level").fetchall()
-        pairs = c.sql("select * from marts.mart_skill_pairs limit 12").fetchall()
-        sources = c.sql(
+        skills = c.execute("select * from marts.mart_skill_demand limit 25").fetchall()
+        levels = c.execute("select * from marts.mart_salary_by_level").fetchall()
+        pairs = c.execute("select * from marts.mart_skill_pairs limit 12").fetchall()
+        sources = c.execute(
             "select source, count(*) from intermediate.int_jobs group by 1 order by 2 desc"
         ).fetchall()
 
