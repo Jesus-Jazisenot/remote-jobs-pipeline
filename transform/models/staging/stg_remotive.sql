@@ -11,10 +11,10 @@ parsed as (
         list_filter(
             list_transform(
                 regexp_extract_all(lower(replace(coalesce(salary, ''), ',', '')), '\d+(?:\.\d+)?\s*k?'),
-                x -> case when x like '%k' then trim(replace(x, 'k', ''))::double * 1000
+                lambda x: case when x like '%k' then trim(replace(x, 'k', ''))::double * 1000
                           else trim(x)::double end
             ),
-            n -> n >= 10
+            lambda n: n >= 10
         ) as salary_numbers
     from ranked
     where rn = 1
